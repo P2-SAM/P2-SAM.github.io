@@ -1,14 +1,14 @@
-# Nerfies
+# GaussianStego: Embedding Invisible Information within Generative 3D Gaussian Splattings
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [gaussian-stego website](https://gaussian-stego.github.io/).
 
-If you find Nerfies useful for your work please cite:
+If you find gaussian-stego useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{li2024gaussianstego,
+  author    = {Chenxin Li and Hengyu Liu and Zhiwen Fan and Wuyang Li and Yifan Liu and Panwang Pan and Yixuan Yuan},
+  title     = {GaussianStego: Embedding Invisible Information within Generative 3D Gaussian Splattings},
+  journal   = {arXiv preprint},
+  year      = {2024},
 }
 ```
 
