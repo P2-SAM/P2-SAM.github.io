@@ -25,6 +25,11 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .gradient-text {
+            background: linear-gradient(to right, #00f, #8a2be2, #f00); /* 渐变色定义 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -53,7 +58,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title">GaussianStego: Embedding Invisible Information <br> within Generative 3D Gaussian Splatting</h1>
+          <h1 class="title is-3 publication-title"><span class="gradient-text">GaussianStego</span>: Embedding Invisible Information <br> within Generative 3D Gaussian Splatting</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://xggnet.github.io/">Chenxin Li</a><sup>1†</sup>,</span>
