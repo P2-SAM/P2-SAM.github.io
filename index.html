@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaussianStego</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  <style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="shortcut icon" href="./static/images/aim.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title">GaussianStego: Embedding Invisible Information <br> within Generative 3D Gaussian Splatting</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://xggnet.github.io/">Chenxin Li</a><sup>1†</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/LiuHengyu321">Hengyu Liu</a><sup>1†</sup>,</span>
+            <span class="author-block">
+              <a href="https://zhiwenfan.github.io/">Zhiwen Fan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://wymancv.github.io/wuyang.github.io/">Wuyang Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yifliu3.github.io/">Yifan Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://paulpanwang.github.io/">Panwang Pan</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ee.cuhk.edu.hk/~yxyuan/people/people.htm">Yixuan Yuan</a><sup>1‡</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>CUHK,</span>
+            <span class="author-block"><sup>2</sup>UT Austin,</span>
+            <span class="author-block"><sup>3</sup>ByteDance</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            † denotes equal contribution, ‡ denotes corresponding author
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              
+              <span class="link-block">
+                <a href="https://github.com/CUHK-AIM-Group/GaussianStego"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/CUHK-AIM-Group/GaussianStego"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#bib"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <hr style="margin-top:0px">
+        <div class="content has-text-justified">
+          <p>
+            Recent advancements in large generative models and real-time neural rendering 
+            using point-based techniques pave the way for a future of widespread visual data distribution through sharing synthesized 3D assets. 
+          </p>
+          <p>
+            However, while standardized methods for embedding proprietary or copyright information, either overtly or subtly, 
+            exist for conventional visual content such as images and videos, this issue remains unexplored for emerging generative 3D formats like Gaussian Splatting.
+          </p>
+          <p>
+            We present GaussianStego, a method for embedding steganographic information in the rendering of generated 3D assets.
+            Our approach employs an optimization framework that enables the accurate extraction of hidden information from images rendered using Gaussian assets derived from large models, while maintaining their original visual quality. 
+          </p>
+          <p>
+            
+            We conduct preliminary evaluations of our method across several potential deployment scenarios and discuss issues identified through analysis. GaussianStego represents an initial exploration into the novel challenge of embedding customizable, imperceptible, and recoverable information within the renders produced by current 3D generative models, while ensuring minimal impact on the rendered content's quality.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Framework</h2>
+        <hr style="margin-top:0px">
+        <img src="./static/images/method.jpg" alt="" width="800" height="250" class="center">
+        
+
+        <div class="content has-text-justified">
+          <p>
+            <strong>Overview of GaussianStego:</strong>
+            During (a) Hidden Information Embedding, GaussianStego incorporates the DINOv2 features of the hidden information into the intermediate feature of Gaussian generation via cross-attention. 
+            In (b) Hidden Information Recovery, a U-Net-based decoder is employed to retrieve the hidden information from the rendered image under the checking pose. T
+            hrough the optimization process, (c) Adaptive Gradient Harmonization is utilized to maintain a balance between the rendering and hidden recovery.
+          </p>
+        </div>
+
+    
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Experiments</h2>
+          <hr style="margin-top:0px">
+          <h2 class="title is-4">Results of in-domin objects</h2>
+          <img src="./static/images/pic_indomin.png" alt="" width="800" height="250" class="center">
+          <hr style="margin-top:0px">
+
+          <h2 class="title is-4">Results of in-the-wild objects</h2>
+          <img src="./static/images/pic_wild.jpg" alt="" width="800" height="250" class="center"> 
+
+          <hr style="margin-top:0px">
+          <h2 class="title is-4">Results of embedding multimodal information</h2>
+          <img src="./static/images/pic_modal.jpg" alt="" width="800" height="250" text-align="center" class="center">
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title" id="bib">BibTeX</h2>
+    <hr style="margin-top:0px">
+    <pre><code>@article{li2024gaussianstego,
+  author    = {Chenxin Li and Hengyu Liu and Zhiwen Fan and Wuyang Li and Yifan Liu and Panwang Pan and Yixuan Yuan},
+  title     = {GaussianStego: Embedding Invisible Information within Generative 3D Gaussian Splattings},
+  journal   = {arXiv preprint},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
