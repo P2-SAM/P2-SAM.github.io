@@ -1,15 +1,15 @@
-# GaussianStego: Embedding Invisible Information within Generative 3D Gaussian Splattings
+# P&sup2;SAM: Probabilistically Prompted SAMs Are Efficient Segmentator for Ambiguous Medical Images
 
-This is the repository that contains source code for the [gaussian-stego website](https://gaussian-stego.github.io/).
+This is the repository that contains source code for the [P&sup2;SAM website]().
 
-If you find gaussian-stego useful for your work please cite:
+If you find P&sup2;SAM useful for your work please cite:
 ```
-@article{li2024gaussianstego,
-  author    = {Chenxin Li and Hengyu Liu and Zhiwen Fan and Wuyang Li and Yifan Liu and Panwang Pan and Yixuan Yuan},
-  title     = {GaussianStego: Embedding Invisible Information within Generative 3D Gaussian Splattings},
-  journal   = {arXiv preprint},
-  year      = {2024},
-}
+@article{huang2024p2sam,
+        title={P²SAM: Probabilistically Prompted SAMs Are Efficient Segmentator for Ambiguous Medical Images},
+        author={Huang, Yuzhi and Li, Chenxin and Lin, Zixu and Liu, Hengyu and Xu Haote and Liu, Yifan and Huang, Yue and Ding, Xinghao and Yuan, Yixuan},
+        journal={arXiv preprint arXiv:2407.01301},
+        year={2024}
+      }
 ```
 
 # Website License

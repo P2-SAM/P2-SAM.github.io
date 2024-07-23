@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GaussianStego</title>
+  <title>P&sup2;SAM</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -58,33 +58,51 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title"><span class="gradient-text">GaussianStego</span>: Embedding Invisible Information <br> within Generative 3D Gaussian Splatting</h1>
+          <h1 class="title is-3 publication-title"><span class="gradient-text">P&sup2;SAM: Probabilistically Prompted SAMs </span> Are <br> Efficient
+            Segmentator for Ambiguous Medical Images</h1>
           <div class="is-size-5 publication-authors">
+
             <span class="author-block">
-              <a href="https://xggnet.github.io/">Chenxin Li</a><sup>1†</sup>,</span>
+              <a href="https://openreview.net/profile?id=~Yuzhihuang1">Yuzhi Huang</a><sup>1†</sup>,</span>
+            </span>
+
             <span class="author-block">
-              <a href="https://liuhengyu321.github.io/">Hengyu Liu</a><sup>1†</sup>,</span>
+              <a href="https://xggnet.github.io/">Chenxin Li</a><sup>2†‡</sup>,</span>
+            </span>
+
             <span class="author-block">
-              <a href="https://zhiwenfan.github.io/">Zhiwen Fan</a><sup>2</sup>,
+              <a href="https://openreview.net/profile?id=~ZiXu_Lin1">Zixu Lin</a><sup>1</sup>,</span>
+            </span>
+
+            <span class="author-block">
+              <a href="https://liuhengyu321.github.io/">Hengyu Liu</a><sup>2</sup>,</span>
             </span>
             <span class="author-block">
-              <a href="https://wymancv.github.io/wuyang.github.io/">Wuyang Li</a><sup>1</sup>,
+              <a href="https://dblp.org/pid/251/4038.html">Haote Xu</a><sup>1</sup>,</span>
             </span>
+
+            <br>
             <span class="author-block">
-              <a href="https://yifliu3.github.io/">Yifan Liu</a><sup>1</sup>,
+              <a href="https://yifliu3.github.io/">Yifan Liu</a><sup>2</sup>,
             </span>
+            
             <span class="author-block">
-              <a href="https://paulpanwang.github.io/">Panwang Pan</a><sup>3</sup>,
+              <a href="https://huangyue05.github.io/">Yue Huang</a><sup>1‡</sup>,</span>
             </span>
+
             <span class="author-block">
-              <a href="http://www.ee.cuhk.edu.hk/~yxyuan/people/people.htm">Yixuan Yuan</a><sup>1‡</sup>
+              <a href="https://xmu-smartdsp.github.io/teamindex/xhding.html">Xinghao Ding</a><sup>1,3</sup>,</span>
+            </span>
+
+            <span class="author-block">
+              <a href="http://www.ee.cuhk.edu.hk/~yxyuan/people/people.htm">Yixuan Yuan</a><sup>2</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>CUHK,</span>
-            <span class="author-block"><sup>2</sup>UT Austin,</span>
-            <span class="author-block"><sup>3</sup>ByteDance</span>
+            <span class="author-block"><sup>1</sup>School of Informatics, Xiamen University,</span>
+            <span class="author-block"><sup>2</sup>The Chinese University of Hong,</span> <br>
+            <span class="author-block"><sup>3</sup>Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Xiamen University</span>
           </div>
 
           <div class="is-size-6 publication-authors">
@@ -96,7 +114,7 @@
               <!-- PDF Link. -->
               
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2407.01301"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -106,7 +124,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/CUHK-AIM-Group/GaussianStego"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -142,19 +160,21 @@
         <hr style="margin-top:0px">
         <div class="content has-text-justified">
           <p>
-            Recent advancements in large generative models and real-time neural rendering using point-based techniques pave the way for a future of widespread visual data distribution through sharing synthesized 3D assets. 
+          The ability to generate an array of plausible outputs for a single input has profound implications for dealing with inherent ambiguity in visual scenarios. 
+          This is evident in scenarios where diverse semantic segmentation annotations for a single medical image are provided by various experts.
+          Existing methods hinge on probabilistic modelling of representations to depict this ambiguity and rely on extensive multi-output annotated data to learn this probabilistic space. 
           </p>
           <p>
-            However, while standardized methods for embedding proprietary or copyright information, either overtly or subtly, 
-            exist for conventional visual content such as images and videos, this issue remains unexplored for emerging generative 3D formats like Gaussian Splatting.
+            However, these methods often falter when only a limited amount of ambiguously labelled data is available, which is a common occurrence in real-world applications. 
+            To surmount these challenges, we propose a novel framework, termed as <span class="gradient-text">P&sup2;SAM</span>, that leverages the prior knowledge of the Segment Anything Model (SAM) during the segmentation of ambiguous objects. 
+            Specifically, we delve into an inherent drawback of SAM in deterministic segmentation, i.e., the sensitivity of output to prompts, and ingeniously transform this into an advantage for ambiguous segmentation tasks by introducing a prior probabilistic space for prompts. 
           </p>
           <p>
-            We present GaussianStego, a method for embedding steganographic information in the rendering of generated 3D assets.
-            Our approach employs an optimization framework that enables the accurate extraction of hidden information from images rendered using Gaussian assets derived from large models, while maintaining their original visual quality. 
+            Experimental results demonstrate that our strategy significantly enhances the precision and diversity of medical segmentation through the utilization of a small number of ambiguously annotated samples by doctors. 
+            Rigorous benchmarking experiments against state-of-the-art methods indicate that our method achieves superior segmentation precision and diversified outputs with fewer training data (using simply 5.5% samples, +12% D<sub>max</sub>). 
           </p>
           <p>
-            
-            We conduct preliminary evaluations of our method across several potential deployment scenarios and discuss issues identified through analysis. GaussianStego represents an initial exploration into the novel challenge of embedding customizable, imperceptible, and recoverable information within the renders produced by current 3D generative models, while ensuring minimal impact on the rendered content's quality.
+            The <span class="gradient-text">P&sup2;SAM</span> signifies a substantial step towards the practical deployment of probabilistic models in real-world scenarios with limited data.
           </p>
           
         </div>
@@ -169,17 +189,17 @@
 
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Framework</h2>
+        <h2 class="title is-3">Pipeline</h2>
         <hr style="margin-top:0px">
-        <img src="./static/images/method.jpg" alt="" width="800" height="250" class="center">
+        <img src="./static/images/method.jpg" alt="" width="800" height="400" class="center">
         
 
         <div class="content has-text-justified">
           <p>
-            <strong>Overview of GaussianStego:</strong>
-            During (a) Hidden Information Embedding, GaussianStego incorporates the DINOv2 features of the hidden information into the intermediate feature of Gaussian generation via cross-attention. 
-            In (b) Hidden Information Recovery, a U-Net-based decoder is employed to retrieve the hidden information from the rendered image under the checking pose. 
-            Through the optimization process, (c) Adaptive Gradient Harmonization is utilized to maintain a balance between the rendering and hidden recovery.
+            <strong>Overview of <span class="gradient-text">P&sup2;SAM</span>:</strong>
+            (a) We first lift the conventional SAM prompting to the probabilistic space, by leveraging a network targeting at generating prompt distribution. 
+            (b) Then we sample the prompt embedding from the probabilistic latent space and instill it into SAM to unlock the capacity of SAM in "one-to-many" ambiguous segmentation. 
+            (c) We carefully design a diversity-aware assembling that perceives the inherent diversity in SAM and turn it to ensembled ambiguous output.
           </p>
         </div>
 
@@ -190,16 +210,16 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Experiments</h2>
           <hr style="margin-top:0px">
-          <h2 class="title is-4">Results of in-domin objects</h2>
-          <img src="./static/images/pic_indomin.png" alt="" width="800" height="250" class="center">
+          <h2 class="title is-4">Results on LIDC-IDRI</h2>
+          <img src="./static/images/res_LIDC_1.jpg" alt="" width="1000" height="400" class="center">
+          <img src="./static/images/res_LIDC_2.png" alt="" width="800" height="300" class="center">
+          <img src="./static/images/res_LIDC_3.png" alt="" width="800" height="300" class="center">
           <hr style="margin-top:0px">
 
-          <h2 class="title is-4">Results of in-the-wild objects</h2>
-          <img src="./static/images/pic_wild.jpg" alt="" width="800" height="250" class="center"> 
+          <h2 class="title is-4">Results on BraTS2017</h2>
+          <img src="./static/images/res_BraTS2017_1.jpg" alt="" width="1000" height="250" class="center"> 
+          <img src="./static/images/res_BraTS2017_2.png" alt="" width="800" height="250" class="center"> 
 
-          <hr style="margin-top:0px">
-          <h2 class="title is-4">Results of embedding multimodal information</h2>
-          <img src="./static/images/pic_modal.jpg" alt="" width="800" height="250" text-align="center" class="center">
         </div>
       </div>
     </div>
@@ -210,12 +230,14 @@
   <div class="container is-max-desktop content">
     <h2 class="title" id="bib">BibTeX</h2>
     <hr style="margin-top:0px">
-    <pre><code>@article{li2024gaussianstego,
-  author    = {Chenxin Li and Hengyu Liu and Zhiwen Fan and Wuyang Li and Yifan Liu and Panwang Pan and Yixuan Yuan},
-  title     = {GaussianStego: Embedding Invisible Information within Generative 3D Gaussian Splattings},
-  journal   = {arXiv preprint},
-  year      = {2024},
-}</code></pre>
+    <pre><code>
+      @article{huang2024p2sam,
+        title={P²SAM: Probabilistically Prompted SAMs Are Efficient Segmentator for Ambiguous Medical Images},
+        author={Huang, Yuzhi and Li, Chenxin and Lin, Zixu and Liu, Hengyu and Xu Haote and Liu, Yifan and Huang, Yue and Ding, Xinghao and Yuan, Yixuan},
+        journal={arXiv preprint arXiv:2407.01301},
+        year={2024}
+      }
+    </code></pre>
   </div>
 </section>
 
